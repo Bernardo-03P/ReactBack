@@ -1,10 +1,3 @@
-
----
-
-### Para o Repositório do Frontend
-
-Copie todo o conteúdo dentro da caixa abaixo e cole no arquivo `README.md` da raiz do seu projeto frontend (pasta `front`).
-
 ```markdown
 # VCR Digital - Frontend (React)
 
