@@ -67,3 +67,5 @@ A aplicação se comunica com a **API do Backend** para persistir e recuperar os
 A aplicação será aberta automaticamente no seu navegador, geralmente no endereço `http://localhost:3000`.
 
 ## 📂 Estrutura dos Componentes
+-   **`App.js`**: Componente principal que renderiza as outras partes da aplicação.
+-   **`depoimentos.js`**: Componente que representa o painel de administração, onde é possível gerenciar todos os depoimentos e criar novos!.
