@@ -1,25 +1,27 @@
-```markdown
 # VCR Digital - Frontend (React)
 
 ## 📝 Descrição do Projeto
 
-Este é o frontend do projeto VCR Digital, construído com React. A aplicação consiste em uma interface pública para que os visitantes possam enviar seus depoimentos e um painel de administração completo para gerenciar esses depoimentos.
+Este é o frontend do projeto VCR Digital, uma Single Page Application (SPA) desenvolvida em React. A aplicação é a interface com a qual o usuário interage, e inclui duas áreas principais:
 
-O painel de administração permite visualizar, editar e deletar os registros existentes, além de visualizar como eles aparecerão no site.
+1.  **Formulário Público:** Uma seção no site onde visitantes podem deixar seus depoimentos.
+2.  **Painel de Administração:** Uma área restrita para gerenciar todos os depoimentos, permitindo ao administrador visualizar, editar e deletar cada registro de forma intuitiva e com atualização em tempo real.
+
+A aplicação se comunica com a **API do Backend** para persistir e recuperar os dados.
 
 ## 🚀 Tecnologias Utilizadas
 
 -   **React**: Biblioteca para construção de interfaces de usuário.
--   **Create React App**: Ferramenta para iniciar projetos React com configuração otimizada.
+-   **Create React App**: Ferramenta base para a estrutura do projeto.
 -   **Axios**: Cliente HTTP para realizar requisições à API do backend.
--   **CSS**: Para estilização dos componentes, seguindo a identidade visual do projeto.
+-   **CSS**: Para estilização customizada dos componentes.
 
 ## 🔧 Instalação e Configuração
 
 ### Pré-requisitos
 
 -   **Node.js** (versão 14 ou superior)
--   O **servidor backend** deste projeto deve estar configurado e rodando.
+-   O **servidor do backend** deste projeto deve estar configurado e em execução.
 
 ### Passos para Instalação
 
@@ -35,18 +37,19 @@ O painel de administração permite visualizar, editar e deletar os registros ex
     ```
 
 3.  **Configure a Conexão com o Backend:**
-    Para que a aplicação React possa se comunicar com a API durante o desenvolvimento, é necessário configurar um proxy no `package.json`:
+    Para que a aplicação React possa se comunicar com a API em ambiente de desenvolvimento, é necessário configurar um proxy. Abra o arquivo `package.json` na raiz do projeto e adicione a seguinte linha:
 
     ```json
-    // Dentro do seu package.json
     "proxy": "http://localhost:3001"
     ```
-    *Obs: `3001` é a porta padrão definida no backend. Altere se necessário.*
 
-4.  **Configure as Variáveis de Ambiente (Opcional, mas recomendado):**
-    Para evitar um erro de segurança do `webpack-dev-server`, crie um arquivo chamado `.env` na raiz do projeto frontend e adicione a seguinte linha:
+    *Observação: `3001` é a porta padrão definida no backend. Se você a alterou no arquivo `.env` do backend, altere aqui também.*
+
+4.  **(Opcional) Configure as Variáveis de Ambiente:**
+    Para resolver um problema comum de `allowedHosts` ao usar a funcionalidade de proxy, crie um arquivo chamado `.env` na raiz deste projeto frontend e adicione o seguinte conteúdo:
     
-    ```
+    ```dotenv
+    # Arquivo .env
     DANGEROUSLY_DISABLE_HOST_CHECK=true
     ```
 
@@ -54,11 +57,13 @@ O painel de administração permite visualizar, editar e deletar os registros ex
 
 **Importante:** Antes de iniciar o frontend, certifique-se de que o servidor backend já está rodando.
 
-1.  Navegue até a pasta raiz do projeto frontend.
+1.  No terminal, navegue até a pasta raiz do projeto frontend.
 2.  Execute o seguinte comando para iniciar a aplicação em modo de desenvolvimento:
 
     ```bash
     npm start
     ```
 
-O comando irá abrir uma nova aba no seu navegador padrão com a aplicação rodando, geralmente em `http://localhost:3000`.
+A aplicação será aberta automaticamente no seu navegador, geralmente no endereço `http://localhost:3000`.
+
+## 📂 Estrutura dos Componentes
